@@ -71,6 +71,46 @@ body {
   font-size: 2rem;
 }
 
+.list-header {
+  margin-top: 10rem;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+thead {
+  font-size: 4rem;
+}
+
+.number,
+.name,
+.action {
+  font-size: 1.4rem;
+}
+
+.number {
+  font-weight: bold;
+}
+
+.name {
+  font-weight: 500;
+}
+
+.btn-randomize {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-random {
+  margin-left: 0;
+  width: 40rem;
+}
+
+.fa-dice-five {
+  font-size: 2rem;
+}
+
 @media only screen and (max-width: 980px) {
   .form-label {
     text-align: left;
