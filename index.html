@@ -10,25 +10,51 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Menu Randomizer</title>
   </head>
   <body>
-    <header class="header-container">
-      <h1 class="header-title">data makanan</h1>
-      <span class="hr-line"></span>
+    <header class="header-container container">
+      <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+          <h1 class="header-title">data makanan</h1>
+          <span class="hr-line"></span>
+        </div>
+        <div class="col-lg-4"></div>
+      </div>
     </header>
 
     <div class="container">
-      <div class="row">
-        <form action="#" method="POST" class="">
-          <input type="text" name="input-menu" id="input-menu" />
-          <input type="submit" value="Create" id="submit" />
-        </form>
-      </div>
+      <form method="POST" class="row g-3">
+        <label class="form-label col-lg-2" for="input-menu">Insert Menu</label>
+        <div class="col-lg-7 form-input">
+          <input
+            type="text"
+            name="input-menu"
+            class="form-control"
+            id="input-menu"
+            placeholder="Input Menu"
+          />
+        </div>
+        <button class="btn btn-primary col-lg-2">
+          <i class="fas fa-utensils fas-lg"></i> create
+        </button>
+        <div class="col-lg-1"></div>
+      </form>
     </div>
 
     <script
