@@ -44,7 +44,9 @@ body {
   align-items: center;
 }
 
-.form-label {
+.form-dc,
+.form-label,
+.form-label-randomize {
   padding: 0.5rem 0 0 0;
   font-size: 2.4rem;
   font-weight: 700;
@@ -53,8 +55,14 @@ body {
   margin-right: 3rem;
 }
 
-.form-container {
-  width: 100%;
+.form-label-randomize {
+  margin-right: 0;
+  margin-left: 5rem;
+  text-align: start;
+}
+
+.form-dc {
+  margin-left: 0;
 }
 
 .btn {
@@ -100,6 +108,7 @@ thead {
 .btn-randomize {
   display: flex;
   justify-content: center;
+  margin-top: 5rem;
 }
 
 .btn-random {
@@ -109,6 +118,29 @@ thead {
 
 .fa-dice-five {
   font-size: 2rem;
+}
+
+.form-container {
+  width: 100%;
+  margin-top: 8rem;
+}
+
+.form-randomize {
+  width: 70%;
+  height: 100%;
+  font-size: 2.2rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 3px solid #242424;
+}
+
+.form-output {
+  margin-bottom: 3rem;
+}
+
+.mb-7 {
+  margin-bottom: 7rem;
 }
 
 @media only screen and (max-width: 980px) {
