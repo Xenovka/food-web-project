@@ -75,6 +75,11 @@ body {
   margin-left: 4rem;
 }
 
+.bi-wrench,
+.bi-x-circle-fill {
+  font-size: 2rem;
+}
+
 .fas-lg {
   font-size: 2rem;
 }
@@ -103,6 +108,11 @@ thead {
 
 .name {
   font-weight: 500;
+}
+
+.name,
+.number {
+  line-height: 1.9;
 }
 
 .btn-randomize {
