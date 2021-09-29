@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Udon With Mozarella Cheese",
+    "category": "lunch"
+  },
+  {
+    "name": "Pizza Topped With Squid Ink Sauce",
+    "category": "dinner"
+  },
+  {
+    "name": "Baked Coffee Fish With Gold Sprinkles",
+    "category": "lunch"
+  },
+  {
+    "name": "Water-Filled Toast",
+    "category": "breakfast"
+  },
+  {
+    "name": "Whole Brocolli Tree",
+    "category": "breakfast"
+  },
+  {
+    "name": "Whole Carrot Toast",
+    "category": "breakfast"
+  },
+  {
+    "name": "Rainbow Mushroom",
+    "category": "lunch"
+  },
+  {
+    "name": "Sweet Dark Chocolate Corn Soup",
+    "category": "dinner"
+  },
+  {
+    "name": "Paper Dumplings Filled With Crunchy Tissues",
+    "category": "breakfast"
+  }
+]
