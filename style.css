@@ -72,12 +72,6 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   padding: 1rem;
-  margin-left: 4rem;
-}
-
-.bi-wrench,
-.bi-x-circle-fill {
-  font-size: 2rem;
 }
 
 .fas-lg {
@@ -99,7 +93,12 @@ thead {
 .number,
 .name,
 .action {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+}
+
+.name,
+.number {
+  vertical-align: middle;
 }
 
 .number {
@@ -110,9 +109,8 @@ thead {
   font-weight: 500;
 }
 
-.name,
-.number {
-  line-height: 1.9;
+.action {
+  width: 30%;
 }
 
 .btn-randomize {
@@ -124,6 +122,21 @@ thead {
 .btn-random {
   margin-left: 0;
   width: 40rem;
+}
+
+.btn-table {
+  padding: 0.6rem 1rem;
+  width: 49%;
+}
+
+.edit-icon,
+.delete-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.btn-text {
+  font-size: 1.4rem;
 }
 
 .fa-dice-five {
@@ -173,5 +186,24 @@ thead {
 
   .btn {
     margin-left: 0;
+  }
+
+  .btn-text {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .btn-text {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+  }
+
+  .btn-table {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
   }
 }
