@@ -126,9 +126,12 @@ thead {
 }
 
 .form-randomize {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #242424;
+  text-transform: uppercase;
   width: 70%;
   height: 100%;
-  font-size: 2.2rem;
   background-color: transparent;
   border: none;
   outline: none;
@@ -143,10 +146,19 @@ thead {
   margin-bottom: 7rem;
 }
 
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1200px) {
+  .form-label-randomize {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
   .form-label {
+    font-size: 2rem;
     text-align: left;
-    margin-top: 5rem;
+  }
+
+  .form-randomize {
+    margin-top: 1rem;
   }
 
   .btn {
