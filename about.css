@@ -37,7 +37,7 @@ body {
   background-color: #333333;
   width: 60%;
   border-radius: 10px;
-  margin-bottom: 2rem;
+  margin-bottom: 10rem;
   transition: transform 0.2s;
 }
 
@@ -51,10 +51,26 @@ body {
   font-weight: 400;
   color: rgb(208, 230, 245);
   line-height: 5rem;
+  letter-spacing: 0.1rem;
 }
 
 .member-nim {
   font-size: 1.8rem;
   font-weight: 500;
   color: rgb(208, 230, 245);
+  margin-bottom: 2rem;
+  letter-spacing: 0.15rem;
+}
+
+.member-info {
+  background-color: rgb(208, 230, 245);
+  width: 97%;
+  text-align: center;
+  height: 20rem;
+  padding: 2rem 1rem 1rem;
+  font-size: 1.5rem;
+  overflow-wrap: break-word;
+  font-style: italic;
+  border-radius: 2px;
+  margin-left: 1.5%;
 }
