@@ -9,7 +9,7 @@ body {
   font-family: "Ubuntu", sans-serif;
   background-image: url("./images/background.jpeg");
   background-size: cover;
-  background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -50,6 +50,7 @@ body {
 .form-dc,
 .form-label,
 .form-label-randomize {
+  color: #fff;
   padding: 0.5rem 0 0 0;
   font-size: 2.4rem;
   font-weight: 700;
@@ -78,6 +79,7 @@ body {
 }
 
 .list-header {
+  color: #fff;
   margin-top: 10rem;
   text-transform: uppercase;
   font-size: 2.4rem;
@@ -143,14 +145,14 @@ thead {
   font-size: 1.4rem;
 }
 
+.btn-primary {
+  background-color: #ff9900;
+  border: none;
+}
+
 .form-container {
   width: 100%;
   margin-top: 8rem;
-}
-
-.form-label-randomize,
-.form-dc {
-  color: #fff;
 }
 
 .form-randomize {
