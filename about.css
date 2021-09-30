@@ -6,7 +6,10 @@
 }
 
 body {
-  background-color: #89abe3ff;
+  background-image: url("./images/background.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   font-family: "Ubuntu", sans-serif;
 }
 
@@ -49,7 +52,7 @@ body {
 .member-name {
   font-size: 2.8rem;
   font-weight: 400;
-  color: rgb(208, 230, 245);
+  color: rgb(233, 136, 8);
   line-height: 5rem;
   letter-spacing: 0.1rem;
 }
@@ -57,13 +60,13 @@ body {
 .member-nim {
   font-size: 1.8rem;
   font-weight: 500;
-  color: rgb(208, 230, 245);
+  color: rgb(233, 136, 8);
   margin-bottom: 2rem;
   letter-spacing: 0.15rem;
 }
 
 .member-info {
-  background-color: rgb(208, 230, 245);
+  background-color: rgb(233, 220, 176);
   width: 97%;
   text-align: center;
   height: 20rem;
