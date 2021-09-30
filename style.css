@@ -74,10 +74,6 @@ body {
   padding: 1rem;
 }
 
-.fas-lg {
-  font-size: 2rem;
-}
-
 .list-header {
   margin-top: 10rem;
   text-transform: uppercase;
@@ -130,17 +126,18 @@ thead {
 }
 
 .edit-icon,
-.delete-icon {
+.delete-icon,
+.button-icon {
   width: 24px;
   height: 24px;
 }
 
-.btn-text {
-  font-size: 1.4rem;
+.button-icon {
+  margin-top: -5px;
 }
 
-.fa-dice-five {
-  font-size: 2rem;
+.btn-text {
+  font-size: 1.4rem;
 }
 
 .form-container {
@@ -191,6 +188,10 @@ thead {
   .btn-text {
     font-size: 1rem;
   }
+
+  .form-randomize {
+    font-size: 1.8rem;
+  }
 }
 
 @media only screen and (max-width: 780px) {
@@ -205,5 +206,19 @@ thead {
     justify-content: center;
     width: 100%;
     margin-top: 1rem;
+  }
+
+  .form-randomize {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .form-dc {
+    display: none;
+  }
+
+  .form-randomize {
+    font-size: 1.4rem;
   }
 }
