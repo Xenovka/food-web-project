@@ -77,7 +77,7 @@ function onSubmitMenu() {
       category: generateCategory()
     });
 
-    alert("Data Added");
+    alert("Success: Menu successfully added!");
 
     inputElement[0].value = "";
 
@@ -115,7 +115,7 @@ function onDeleteMenu(value) {
   const tableMenu = $("#table-menu tbody");
   JSON_DATA = JSON_DATA.filter((food) => food.name !== value);
 
-  alert("Success: Data deleted!");
+  alert("Success: Data successfully deleted!");
 
   tableMenu.html("");
 
