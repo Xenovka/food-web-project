@@ -1,23 +1,20 @@
-let COUNTER;
+let JSON_DATA;
 
 async function loadDefaultData() {
-  const requestData = await fetch("/food.json");
-  const responseText = await requestData.text();
+  const response = await fetch("/food.json");
+  JSON_DATA = await response.json();
 
-  window.localStorage.setItem("foods", responseText);
+  const tableMenu = $("#table-menu tbody");
 
-  const getData = localStorage.getItem("foods");
-  const data = JSON.parse(getData);
+  const data = JSON_DATA;
 
-  const DOMTable = document.getElementById("table-menu").querySelector("tbody");
-
-  for (COUNTER = 0; COUNTER < 3; COUNTER++) {
-    DOMTable.innerHTML += `
+  for (let counter = 0; counter < 3; counter++) {
+    tableMenu.append(`
       <tr>
-        <td class="number">${COUNTER + 1}</td>
-        <td class="name">${data[COUNTER].name}</td>
+        <td class="number">${counter + 1}</td>
+        <td class="name">${data[counter].name}</td>
         <td class="action">
-          <a class="btn btn-primary btn-table" href="">
+          <a id="edit" class="btn btn-primary btn-table" href="#">
             <img
               class="edit-icon"
               src="./images/edit-icon.png"
@@ -26,7 +23,9 @@ async function loadDefaultData() {
             <span class="btn-text">Edit</span>
           </a>
 
-          <a class="btn btn-primary btn-table" href="">
+          <a id="delete" class="btn btn-primary btn-table" href="#" onClick="onDeleteMenu('${
+            data[counter].name
+          }')">
             <img
               class="delete-icon"
               src="./images/delete-icon.png"
@@ -34,36 +33,60 @@ async function loadDefaultData() {
             />
             <span class="btn-text">Delete</span>
           </a>
-          <a href=""><i class="bi bi-x-circle-fill"></i></a>
         </td>
       </tr>
-    `;
+    `);
   }
 }
 
-async function onSubmitMenu() {
-  const DOMInputForm = document.getElementById("form-input");
-  const DOMTable = document.getElementById("table-menu").querySelector("tbody");
+function generateCategory() {
+  const random = Math.floor(Math.random() * 3) + 1;
 
-  DOMInputForm.addEventListener("submit", (e) => {
+  switch (random) {
+    case 1:
+      return "breakfast";
+    case 2:
+      return "lunch";
+    case 3:
+      return "dinner";
+  }
+}
+
+function onSubmitMenu() {
+  const inputForm = $("#form-input");
+  const tableMenu = $("#table-menu tbody");
+
+  inputForm.on("submit", async (e) => {
     e.preventDefault();
 
-    const data = JSON.parse(localStorage.getItem("foods"));
-    const DOMInput = document.getElementById("input-menu");
+    const data = JSON_DATA;
+    const inputElement = $("#input-menu");
+
+    const isExist = data.filter(
+      (food) => inputElement.get(0).value.trim() === food.name
+    );
+
+    if (isExist.length) {
+      alert("Error: Food you want to create was already exists in the table!");
+      return;
+    }
+
     data.push({
-      name: DOMInput.value
+      id: data.length + 1,
+      name: inputElement.get(0).value,
+      category: generateCategory()
     });
 
-    window.localStorage.setItem("foods", JSON.stringify(data));
+    alert("Data Added");
 
-    DOMInput.value = "";
+    inputElement[0].value = "";
 
-    DOMTable.innerHTML += `
+    tableMenu.append(`
       <tr>
-        <td class="number">${COUNTER + 1}</td>
+        <td class="number">${data.length}</td>
         <td class="name">${data[data.length - 1].name}</td>
         <td class="action">
-          <a class="btn btn-primary btn-table" href="">
+          <a id="edit" class="btn btn-primary btn-table" href="#">
             <img
               class="edit-icon"
               src="./images/edit-icon.png"
@@ -72,7 +95,9 @@ async function onSubmitMenu() {
             <span class="btn-text">Edit</span>
           </a>
 
-          <a class="btn btn-primary btn-table" href="">
+          <a id="delete" class="btn btn-primary btn-table" href="#" onClick="onDeleteMenu('${
+            data[data.length - 1].name
+          }')">
             <img
               class="delete-icon"
               src="./images/delete-icon.png"
@@ -80,13 +105,51 @@ async function onSubmitMenu() {
             />
             <span class="btn-text">Delete</span>
           </a>
-          <a href=""><i class="bi bi-x-circle-fill"></i></a>
         </td>
       </tr>
-    `;
-
-    COUNTER++;
+    `);
   });
 }
+
+function onDeleteMenu(value) {
+  const tableMenu = $("#table-menu tbody");
+  JSON_DATA = JSON_DATA.filter((food) => food.name !== value);
+
+  alert("Success: Data deleted!");
+
+  tableMenu.html("");
+
+  JSON_DATA.forEach((food, idx) => {
+    tableMenu.append(`
+      <tr>
+        <td class="number">${idx + 1}</td>
+        <td class="name">${food.name}</td>
+        <td class="action">
+          <a id="edit" class="btn btn-primary btn-table" href="#">
+            <img
+              class="edit-icon"
+              src="./images/edit-icon.png"
+              alt="edit icon button"
+            />
+            <span class="btn-text">Edit</span>
+          </a>
+
+          <a id="delete" class="btn btn-primary btn-table" href="#" onClick="onDeleteMenu('${
+            food.name
+          }')">
+            <img
+              class="delete-icon"
+              src="./images/delete-icon.png"
+              alt="edit icon button"
+            />
+            <span class="btn-text">Delete</span>
+          </a>
+        </td>
+      </tr>
+    `);
+  });
+}
+
+function onEditMenu() {}
 
 onSubmitMenu();
