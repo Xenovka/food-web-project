@@ -14,11 +14,12 @@ async function loadDefaultData() {
         <td class="number">${counter + 1}</td>
         <td class="name">${data[counter].name}</td>
         <td class="action">
-          <a id="edit" class="btn btn-primary btn-table" href="#">
+          <a id="edit" class="btn btn-primary btn-table" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat" href="#">
             <img
               class="edit-icon"
               src="/assets/images/edit-icon.png"
               alt="edit icon button"
+  
             />
             <span class="btn-text">Edit</span>
           </a>
@@ -74,7 +75,7 @@ function onSubmitMenu() {
     data.push({
       id: data.length + 1,
       name: inputElement.get(0).value,
-      category: generateCategory()
+      category: generateCategory(),
     });
 
     alert("Success: Menu successfully added!");
@@ -86,7 +87,7 @@ function onSubmitMenu() {
         <td class="number">${data.length}</td>
         <td class="name">${data[data.length - 1].name}</td>
         <td class="action">
-          <a id="edit" class="btn btn-primary btn-table" href="#">
+          <a id="edit" class="btn btn-primary btn-table" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat" href="#">
             <img
               class="edit-icon"
               src="/assets/images/edit-icon.png"
