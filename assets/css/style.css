@@ -7,11 +7,32 @@
 
 body {
   font-family: "Ubuntu", sans-serif;
+
   background-image: url("/assets/images/background.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+
+/* .container-home {
+	width: 100%;
+}
+
+.home-icon {
+	position: absolute;
+	display: flex;
+	top: 1rem;
+	right: 1rem;
+}
+
+.bi-house-fill {
+	color: brown;
+	font-size: 5rem;
+	position: absolute;
+	display: flex;
+	top: 4rem;
+	left: 6rem;
+} */
 
 .header-container {
   padding: 4rem 0;
