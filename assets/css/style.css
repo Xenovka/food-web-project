@@ -80,11 +80,16 @@ body {
 
 .list-header {
   color: #fff;
-  margin-top: 10rem;
+  margin-top: 8.5rem;
   text-transform: uppercase;
-  font-size: 2.4rem;
+  font-size: 3rem;
   font-weight: 700;
   text-align: center;
+}
+
+tr,
+th {
+  color: rgb(87, 50, 20);
 }
 
 thead {

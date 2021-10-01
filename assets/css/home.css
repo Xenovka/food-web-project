@@ -32,8 +32,7 @@ body {
   font-size: 2rem;
   background-color: #ff9900;
   text-align: center;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-radius: 5px;
   color: #fff;
 }
 
@@ -110,7 +109,7 @@ a {
 }
 
 a:hover {
-  background-color: rgb(255, 153, 0, 0.7);
+  background-color: rgba(255, 153, 0, 0.7);
   transform: scale(1.5);
 }
 
