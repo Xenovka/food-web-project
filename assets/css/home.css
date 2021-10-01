@@ -32,7 +32,8 @@ body {
   font-size: 2rem;
   background-color: #ff9900;
   text-align: center;
-  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   color: #fff;
 }
 
@@ -98,7 +99,7 @@ p {
 
 a {
   text-align: center;
-  transition: 0.3s;
+  transition: transform 0.3s;
   border-radius: 5px;
   padding: 2rem;
   background-color: #ff9900;
@@ -109,7 +110,8 @@ a {
 }
 
 a:hover {
-  background-color: transparent;
+  background-color: rgb(255, 153, 0, 0.7);
+  transform: scale(1.5);
 }
 
 a:visited {
