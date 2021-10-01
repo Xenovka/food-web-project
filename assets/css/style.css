@@ -30,7 +30,7 @@ body {
   position: absolute;
   left: 50%;
   top: 80%;
-  background-color: #fff;
+  background-color: rgb(87, 50, 20);
   width: 30%;
   height: 0.4rem;
   transform: translateX(-50%);
@@ -49,8 +49,15 @@ body {
 
 .form-dc,
 .form-label,
+.form-label-randomize,
+.list-header,
+.header-title {
+  color: rgb(87, 50, 20);
+}
+
+.form-dc,
+.form-label,
 .form-label-randomize {
-  color: #fff;
   padding: 0.5rem 0 0 0;
   font-size: 2.4rem;
   font-weight: 700;
@@ -79,7 +86,6 @@ body {
 }
 
 .list-header {
-  color: #fff;
   margin-top: 5rem;
   text-transform: uppercase;
   font-size: 3rem;
@@ -180,11 +186,17 @@ thead {
   background-color: transparent;
   border: none;
   outline: none;
-  border-bottom: 3px solid #fff;
+  border-bottom: 3px solid rgb(87, 50, 20);
 }
 
 .form-output {
   margin-bottom: 3rem;
+}
+
+.error-message {
+  color: #ff4040;
+  font-size: 1.4rem;
+  line-height: 1.6;
 }
 
 .modal-title {

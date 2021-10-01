@@ -152,44 +152,31 @@
       </div>
     </div>
 
-    <!-- Button trigger modal -->
-    <!-- <button
-      type="button"
-      class="btn btn-primary"
-      data-bs-toggle="modal"
-      data-bs-target="#staticBackdrop"
-    >
-      Launch static backdrop modal
-    </button> -->
-
     <!-- Modal -->
-
     <div
       class="modal fade"
-      id="exampleModal"
+      id="editModal"
       tabindex="-1"
-      aria-labelledby="exampleModalLabel"
+      aria-labelledby="editModalLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Edit Menu</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+            <h5 class="modal-title" id="editModalLabel">Edit Menu</h5>
           </div>
           <div class="modal-body">
-            <form>
+            <form id="modal-form">
               <div class="mb-3">
-                <label for="recipient-name" class="col-form-label modal-label"
+                <label
+                  for="food-name"
+                  class="col-form-label modal-label"
+                  required
                   >Nama Makanan</label
                 >
-                <input type="text" class="form-control" id="recipient-name" />
+                <input type="text" class="form-control" id="edit-input" />
               </div>
+              <h3 id="input-error" class="error-message"></h3>
             </form>
           </div>
           <div class="modal-footer">
@@ -200,7 +187,13 @@
             >
               Cancel
             </button>
-            <button type="button" class="btn btn-primary">Edit</button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="onEditMenu()"
+            >
+              Edit
+            </button>
           </div>
         </div>
       </div>
