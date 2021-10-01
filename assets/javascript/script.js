@@ -1,7 +1,7 @@
 let JSON_DATA;
 
 async function loadDefaultData() {
-  const response = await fetch("/food.json");
+  const response = await fetch("/assets/javascript/food.json");
   JSON_DATA = await response.json();
 
   const tableMenu = $("#table-menu tbody");
@@ -17,7 +17,7 @@ async function loadDefaultData() {
           <a id="edit" class="btn btn-primary btn-table" href="#">
             <img
               class="edit-icon"
-              src="./images/edit-icon.png"
+              src="/assets/images/edit-icon.png"
               alt="edit icon button"
             />
             <span class="btn-text">Edit</span>
@@ -28,7 +28,7 @@ async function loadDefaultData() {
           }')">
             <img
               class="delete-icon"
-              src="./images/delete-icon.png"
+              src="/assets/images/delete-icon.png"
               alt="edit icon button"
             />
             <span class="btn-text">Delete</span>
@@ -89,7 +89,7 @@ function onSubmitMenu() {
           <a id="edit" class="btn btn-primary btn-table" href="#">
             <img
               class="edit-icon"
-              src="./images/edit-icon.png"
+              src="/assets/images/edit-icon.png"
               alt="edit icon button"
             />
             <span class="btn-text">Edit</span>
@@ -100,7 +100,7 @@ function onSubmitMenu() {
           }')">
             <img
               class="delete-icon"
-              src="./images/delete-icon.png"
+              src="/assets/images/delete-icon.png"
               alt="edit icon button"
             />
             <span class="btn-text">Delete</span>
@@ -128,7 +128,7 @@ function onDeleteMenu(value) {
           <a id="edit" class="btn btn-primary btn-table" href="#">
             <img
               class="edit-icon"
-              src="./images/edit-icon.png"
+              src="/assets/images/edit-icon.png"
               alt="edit icon button"
             />
             <span class="btn-text">Edit</span>
@@ -139,7 +139,7 @@ function onDeleteMenu(value) {
           }')">
             <img
               class="delete-icon"
-              src="./images/delete-icon.png"
+              src="/assets/images/delete-icon.png"
               alt="edit icon button"
             />
             <span class="btn-text">Delete</span>

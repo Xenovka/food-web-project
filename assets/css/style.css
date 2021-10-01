@@ -7,7 +7,7 @@
 
 body {
   font-family: "Ubuntu", sans-serif;
-  background-image: url("./images/background.jpeg");
+  background-image: url("/assets/images/background.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -148,6 +148,16 @@ thead {
 .btn-primary {
   background-color: #ff9900;
   border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #e48a03;
+}
+
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: #ff9900;
 }
 
 .form-container {
