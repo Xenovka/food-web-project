@@ -14,26 +14,6 @@ body {
   background-repeat: no-repeat;
 }
 
-/* .container-home {
-	width: 100%;
-}
-
-.home-icon {
-	position: absolute;
-	display: flex;
-	top: 1rem;
-	right: 1rem;
-}
-
-.bi-house-fill {
-	color: brown;
-	font-size: 5rem;
-	position: absolute;
-	display: flex;
-	top: 4rem;
-	left: 6rem;
-} */
-
 .header-container {
   padding: 4rem 0;
   text-align: center;
@@ -134,12 +114,9 @@ thead {
   vertical-align: middle;
 }
 
-.number {
-  font-weight: bold;
-}
-
+.number,
 .name {
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .action {
@@ -180,6 +157,7 @@ thead {
 .btn-primary {
   background-color: #ff9900;
   border: none;
+  outline: none;
   transition: background-color 0.3s ease;
 }
 
@@ -190,6 +168,7 @@ thead {
 .btn-primary:active,
 .btn-primary:focus {
   background-color: #ff9900;
+  outline: none;
 }
 
 .form-container {
@@ -198,7 +177,7 @@ thead {
 }
 
 .form-randomize {
-  font-size: 2.6rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #fff;
   text-transform: uppercase;

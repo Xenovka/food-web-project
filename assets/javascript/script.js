@@ -31,6 +31,8 @@ function onSubmitMenu() {
       category: generateCategory()
     });
 
+    clearRandomize();
+
     alert("Success: Menu successfully added!");
 
     inputElement[0].value = "";
@@ -45,6 +47,7 @@ function onDeleteMenu(value) {
 
   alert("Success: Data successfully deleted!");
 
+  clearRandomize();
   tableMenu.html("");
 
   JSON_DATA.forEach((food, idx) => {
@@ -72,6 +75,8 @@ function onEditMenu() {
     }
   }
 
+  clearRandomize();
+
   JSON_DATA.forEach((food) => {
     if (food.name === EDIT_VALUE) {
       food.name = modalValue;
@@ -84,6 +89,95 @@ function onEditMenu() {
       });
     }
   });
+}
+
+function randomizeMenu() {
+  let inputBreakfast = $("#breakfast");
+  let inputLunch = $("#lunch");
+  let inputDinner = $("#dinner");
+
+  if (JSON_DATA.length <= 0) {
+    alert("Error: There's no such data in the table, try to insert it first!");
+    return;
+  }
+
+  inputBreakfast.val("");
+  inputLunch.val("");
+  inputDinner.val("");
+
+  if (JSON_DATA.length === 1) {
+    let randInput = Math.floor(Math.random() * 3);
+    let randNumber = Math.floor(Math.random() * JSON_DATA.length);
+    let randData = JSON_DATA[randNumber].name;
+
+    switch (randInput) {
+      case 0:
+        inputBreakfast.val(randData);
+        break;
+      case 1:
+        inputLunch.val(randData);
+        break;
+      case 2:
+        inputDinner.val(randData);
+        break;
+    }
+
+    return;
+  }
+
+  if (JSON_DATA.length === 2) {
+    let randInput = Math.floor(Math.random() * 3);
+    let rand = Math.floor(Math.random() * JSON_DATA.length);
+    let rand2 = Math.floor(Math.random() * JSON_DATA.length);
+
+    while (rand === rand2) {
+      rand = Math.floor(Math.random() * JSON_DATA.length);
+    }
+
+    let randData = JSON_DATA[rand].name;
+    let randData2 = JSON_DATA[rand2].name;
+
+    switch (randInput) {
+      case 0:
+        inputBreakfast.val(randData);
+        inputLunch.val(randData2);
+        break;
+      case 1:
+        inputLunch.val(randData);
+        inputDinner.val(randData2);
+        break;
+      case 2:
+        inputBreakfast.val(randData);
+        inputDinner.val(randData2);
+        break;
+    }
+
+    return;
+  }
+
+  for (let i = 0; i < 3; i++) {
+    let rand = Math.floor(Math.random() * JSON_DATA.length);
+    let rand2 = Math.floor(Math.random() * JSON_DATA.length);
+    let rand3 = Math.floor(Math.random() * JSON_DATA.length);
+
+    while (rand === rand2 || rand === rand3 || rand2 === rand3) {
+      if (rand === rand2 || rand === rand3) {
+        rand = Math.floor(Math.random() * JSON_DATA.length);
+      }
+
+      if (rand2 === rand || rand2 === rand3) {
+        rand2 = Math.floor(Math.random() * JSON_DATA.length);
+      }
+
+      if (rand3 === rand || rand3 === rand2) {
+        rand3 = Math.floor(Math.random() * JSON_DATA.length);
+      }
+    }
+
+    inputBreakfast.val(JSON_DATA[rand].name);
+    inputLunch.val(JSON_DATA[rand2].name);
+    inputDinner.val(JSON_DATA[rand3].name);
+  }
 }
 
 // * Helper Functions
@@ -150,6 +244,10 @@ function appendRow(counter, data) {
       </td>
     </tr>
   `;
+}
+
+function clearRandomize() {
+  $(".form-randomize").val("");
 }
 
 onSubmitMenu();

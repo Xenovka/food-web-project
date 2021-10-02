@@ -1,17 +1,14 @@
 [
   {
     "id": 1,
-    "name": "Udon With Mozarella Cheese",
-    "category": "lunch"
+    "name": "Udon With Mozarella Cheese"
   },
   {
     "id": 2,
-    "name": "Pizza Topped With Squid Ink Sauce",
-    "category": "dinner"
+    "name": "Pizza Topped With Squid Ink Sauce"
   },
   {
     "id": 3,
-    "name": "Baked Coffee Fish With Gold Sprinkles",
-    "category": "lunch"
+    "name": "Baked Coffee Fish With Gold Sprinkles"
   }
 ]
