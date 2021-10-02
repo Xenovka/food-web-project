@@ -12,22 +12,16 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet" />
 
     <!-- SelfStyling -->
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <link rel="icon" href="/assets/images/foods-icon.png" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="icon" href="./assets/images/foods-icon.png" />
 
     <title>Menu Randomizer</title>
   </head>
@@ -35,7 +29,7 @@
     <header class="header-container container">
       <!-- <div class="container-home">
 				<a href="index.html"><i class="bi bi-house-fill"></i></a>
-				<img class="home-icon" src="/assets/images/home.png" alt="home" />
+				<img class="home-icon" src="./assets/images/home.png" alt="home" />
 			</div> -->
       <div class="row">
         <div class="col-lg-4"></div>
@@ -51,18 +45,10 @@
       <form id="form-input" class="row g-3">
         <label class="form-label col-lg-2" for="input-menu">Insert Menu</label>
         <div class="col-lg-7 form-input">
-          <input
-            type="text"
-            name="input-menu"
-            class="form-control"
-            id="input-menu"
-            placeholder="Input Menu"
-            value=""
-            required
-          />
+          <input type="text" name="input-menu" class="form-control" id="input-menu" placeholder="Input Menu" value="" required />
         </div>
         <button type="submit" class="btn btn-primary col-lg-2">
-          <img class="button-icon" src="/assets/images/food-icon.png" alt="" />
+          <img class="button-icon" src="./assets/images/food-icon.png" alt="" />
           create
         </button>
         <div class="col-lg-1"></div>
@@ -77,10 +63,7 @@
 
         <div class="col-lg-1"></div>
         <div class="col-lg-10">
-          <table
-            id="table-menu"
-            class="table table-primary table-bordered table-warning"
-          >
+          <table id="table-menu" class="table table-primary table-bordered table-warning">
             <thead>
               <tr>
                 <th>No</th>
@@ -94,16 +77,8 @@
         </div>
         <div class="col-lg-1"></div>
         <div class="col-lg-12 btn-randomize">
-          <button
-            id="randomize"
-            class="btn btn-primary btn-random"
-            onclick="randomizeMenu()"
-          >
-            <img
-              class="button-icon"
-              src="/assets/images/random-icon.png"
-              alt=""
-            />
+          <button id="randomize" class="btn btn-primary btn-random" onclick="randomizeMenu()">
+            <img class="button-icon" src="./assets/images/random-icon.png" alt="" />
             RANDOMIZE
           </button>
         </div>
@@ -113,65 +88,35 @@
     <div class="container form-container">
       <div class="row form-output">
         <div class="col-lg-2"></div>
-        <label for="breakfast" class="col-lg-2 form-label-randomize col-3"
-          >breakfast</label
-        >
+        <label for="breakfast" class="col-lg-2 form-label-randomize col-3">breakfast</label>
         <span class="col-lg-1 form-dc text-center col-1">:</span>
         <div class="col-lg-6 col-12">
-          <input
-            class="form-randomize"
-            type="text"
-            name="breakfast"
-            id="breakfast"
-            disabled
-          />
+          <input class="form-randomize" type="text" name="breakfast" id="breakfast" disabled />
         </div>
         <div class="col-lg-3"></div>
       </div>
       <div class="row form-output">
         <div class="col-lg-2"></div>
-        <label for="lunch" class="col-lg-2 form-label-randomize col-3"
-          >lunch</label
-        >
+        <label for="lunch" class="col-lg-2 form-label-randomize col-3">lunch</label>
         <span class="col-lg-1 form-dc text-center col-1">:</span>
         <div class="col-lg-6 col-12">
-          <input
-            class="form-randomize"
-            type="text"
-            name="lunch"
-            id="lunch"
-            disabled
-          />
+          <input class="form-randomize" type="text" name="lunch" id="lunch" disabled />
         </div>
         <div class="col-lg-3"></div>
       </div>
       <div class="row form-output mb-7">
         <div class="col-lg-2"></div>
-        <label for="dinner" class="col-lg-2 form-label-randomize col-3"
-          >dinner</label
-        >
+        <label for="dinner" class="col-lg-2 form-label-randomize col-3">dinner</label>
         <span class="col-lg-1 form-dc text-center col-1">:</span>
         <div class="col-lg-6 col-12">
-          <input
-            class="form-randomize"
-            type="text"
-            name="dinner"
-            id="dinner"
-            disabled
-          />
+          <input class="form-randomize" type="text" name="dinner" id="dinner" disabled />
         </div>
         <div class="col-lg-3"></div>
       </div>
     </div>
 
     <!-- Modal -->
-    <div
-      class="modal fade"
-      id="editModal"
-      tabindex="-1"
-      aria-labelledby="editModalLabel"
-      aria-hidden="true"
-    >
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -180,32 +125,15 @@
           <div class="modal-body">
             <form id="modal-form">
               <div class="mb-3">
-                <label
-                  for="food-name"
-                  class="col-form-label modal-label"
-                  required
-                  >Nama Makanan</label
-                >
+                <label for="food-name" class="col-form-label modal-label" required>Nama Makanan</label>
                 <input type="text" class="form-control" id="edit-input" />
               </div>
               <h3 id="input-error" class="error-message"></h3>
             </form>
           </div>
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Cancel
-            </button>
-            <button
-              type="button"
-              class="btn btn-primary"
-              onclick="onEditMenu()"
-            >
-              Edit
-            </button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary" onclick="onEditMenu()">Edit</button>
           </div>
         </div>
       </div>
@@ -217,6 +145,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/assets/javascript/script.js"></script>
+    <script src="./assets/javascript/script.js"></script>
   </body>
 </html>
